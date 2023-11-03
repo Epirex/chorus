@@ -181,9 +181,9 @@ app.MovieListItemView = Backbone.View.extend({
   playMovie: function(e){
     e.preventDefault();
     e.stopPropagation();
-    app.VideoController.playVideoId(this.model.attributes.movieid, 'movieid', this.model.attributes, function(data){
-      // movie should be playing
-      app.VideoController.playlistRender();
+      app.AudioController.downloadFile(model.file, function(url){
+      $('.download-link', this.$el).attr('href', url);
+    });
     });
 
   },
