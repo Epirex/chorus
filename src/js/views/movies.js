@@ -184,7 +184,6 @@ app.MovieListItemView = Backbone.View.extend({
       app.AudioController.downloadFile(model.file, function(url){
       $('.download-link', this.$el).attr('href', url);
     });
-    });
 
   },
 
