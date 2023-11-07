@@ -5419,6 +5419,41 @@ h1.video-title {
     padding: 10px;
   }
 }
+
+#header {
+  height: 648px !important;
+}
+
+i.fa.fa-align-justify {
+  display: none !important;
+  
+}
+
+i.fa.fa-thumbs-up {
+  display: none !important;
+}
+
+i.fa.fa-microphone {
+  display: none !important;
+}
+
+i.fa.fa-music {
+  display: none !important;
+}
+
+i.fa.fa-file {
+  display: none !important;
+}
+
+i.fa.fa-mobile {
+  display: none !important;
+  
+}
+
+i.fa.fa-ellipsis-v {
+  display: none !important;
+}
+
 /**
  * Grids
  */

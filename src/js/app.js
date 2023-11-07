@@ -238,17 +238,6 @@ app.Router = Backbone.Router.extend({
 
 
   /**
-   * Thumbs up page
-   */
-  thumbsup: function(){
-
-    app.cached.thumbsUpPage = new app.ThumbsupView();
-    this.$content.html( app.cached.thumbsUpPage.render().$el );
-
-  },
-
-
-  /**
    * Browse all movies
    * uses lazyload, infinite scroll and intelligent back button
    * @todo abstract elsewhere.
