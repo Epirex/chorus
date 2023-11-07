@@ -217,10 +217,10 @@ app.Router = Backbone.Router.extend({
 
       // set title
       var list = app.playlists.getCustomPlaylist(id);
-      app.ui.setTitle('Playlist', {addATag: '#playlist/' + list.id, icon: 'music', subTitle: list.name});
+      app.ui.setTitle('Playlist', {addATag: '#mytv/' + list.id, icon: 'music', subTitle: list.name});
 
       // set menu
-      app.shellView.selectMenuItem('playlist', 'sidebar');
+      app.shellView.selectMenuItem('#mytv', 'sidebar');
 
     }});
 
@@ -233,7 +233,7 @@ app.Router = Backbone.Router.extend({
   playlists: function(){
     app.ui.setTitle('Playlists');
     // set menu
-    app.shellView.selectMenuItem('playlists', 'no-sidebar');
+    app.shellView.selectMenuItem('#mytv', 'no-sidebar');
   },
 
 

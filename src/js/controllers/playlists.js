@@ -345,7 +345,7 @@ app.playlists.changePlaylistView = function(type){
   $at.addClass('active');
 
   $('.sidebar-pane', $sb).hide();
-  $('#playlist-' + type, $sb).show();
+  $('#mytv-' + type, $sb).show();
 
   // toggle between players
   if(type == 'local' || type == 'xbmc'){
@@ -400,7 +400,7 @@ app.playlists.saveCustomPlayListsDialog = function(type, items, hideList, redire
       pl = app.playlists.saveCustomPlayLists('new', name, type, items);
     app.helpers.dialogClose();
     if(redirect){
-      document.location = '#playlist/' + pl.id;
+      document.location = '#mytv' + pl.id;
     }
     app.notification('Playlist updated');
   });
@@ -411,7 +411,7 @@ app.playlists.saveCustomPlayListsDialog = function(type, items, hideList, redire
       pl = app.playlists.saveCustomPlayLists('existing', id, type, items);
     app.helpers.dialogClose();
     if(redirect){
-      document.location = '#playlist/' + pl.id;
+      document.location = '#mytv' + pl.id;
     }
     app.notification('Playlist updated');
   });
