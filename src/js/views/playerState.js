@@ -211,7 +211,7 @@ app.playerStateView = Backbone.View.extend({
       .css('background-image',"url('" + app.image.url(data.item.thumbnail) + "')");
 
     if(app.cached.nowPlaying.activePlayer == 1){
-      this.$nowPlaying.find('#playing-thumb').attr("#remote"); //('href', '#' + data.item.type + '/' + data.item.albumid);
+      this.$nowPlaying.find('#playing-thumb').attr("#mymovies"); //('href', '#' + data.item.type + '/' + data.item.albumid);
     }
     // set title
     $('.playing-song-title').html(app.helpers.uncolorText(data.item.label))

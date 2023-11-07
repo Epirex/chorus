@@ -217,7 +217,7 @@ app.Router = Backbone.Router.extend({
 
       // set title
       var list = app.playlists.getCustomPlaylist(id);
-      app.ui.setTitle('Playlist', {addATag: '#playlist/' + list.id, icon: 'music', subTitle: list.name});
+      app.ui.setTitle('Playlist', {addATag: '#mytv' + list.id, icon: 'music', subTitle: list.name});
 
       // set menu
       app.shellView.selectMenuItem('playlist', 'sidebar');
