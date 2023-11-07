@@ -290,7 +290,7 @@ app.ShellView = Backbone.View.extend({
       // same as using the back button
       window.history.back();
     } else {
-      document.location = '#remote';
+      document.location = '#mymovies';
     }
   },
 
