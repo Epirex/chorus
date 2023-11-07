@@ -270,7 +270,7 @@ app.PlaylistCustomListsView = Backbone.View.extend({
     // Add heading
     this.$el.prepend('<li class="list-heading"><i class="fa fa-file"></i> Lists</li>');
     // menu for heading
-    var $menu = $('<span class="menu lists-menu"><i class="fa fa-desktop"></i></span>');
+    var $menu = $('<span class="menu lists-menu"><i class="fa fa-ellipsis-v"></i></span>');
     // bind click
     $menu.on('click', function(e){
       self.showDialog();
