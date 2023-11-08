@@ -185,14 +185,6 @@ app.MovieListItemView = Backbone.View.extend({
       $('.download-link', this.$el).attr('href', url);
     });
 
-  // Añadir un botón para regresar a index.html
-  var regresarBtn = document.getElementById('regresarBtn');
-
-  regresarBtn.addEventListener('click', function(){
-    // Redirigir al usuario a index.html
-    window.location.href = 'index.html';
-  });
-
   },
 
 
