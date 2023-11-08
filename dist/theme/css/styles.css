@@ -5454,6 +5454,14 @@ i.fa.fa-ellipsis-v {
   display: none !important;
 }
 
+a.imdb.btn {
+  display: none;
+}
+
+#footer, #browser-player-footer{
+  display: none;
+}
+
 /**
  * Grids
  */
