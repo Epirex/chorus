@@ -167,9 +167,9 @@ app.TvshowListItemView = Backbone.View.extend({
     e.stopPropagation();
 
     // Add the model
-    var model = this.model.attributes;
-    app.VideoController.tvshowPlay(model, function(){
-      app.VideoController.playlistRender();
+      // populate download link
+    app.AudioController.downloadFile(model.file, function(url){
+      $('.download-link', this.$el).attr('href', url);
     });
 
   },
@@ -361,8 +361,8 @@ app.TvshowView = Backbone.View.extend({
     e.stopPropagation();
 
     // Play the model
-    app.VideoController.tvshowPlay(this.model.attributes, function(){
-      app.VideoController.playlistRender();
+    app.AudioController.downloadFile(model.file, function(url){
+      $('.download-link', this.$el).attr('href', url);
     });
 
   },
