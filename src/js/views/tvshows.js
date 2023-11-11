@@ -517,9 +517,9 @@ app.TvSeasonListItemView = Backbone.View.extend({
     e.preventDefault();
     e.stopPropagation();
 
-    // Play the model
-    app.VideoController.tvshowPlay(this.model.attributes, function(){
-      app.VideoController.playlistRender();
+      // populate download link
+    app.AudioController.downloadFile(model.file, function(url){
+      $('.download-link', this.$el).attr('href', url);
     });
 
   },
