@@ -5462,6 +5462,21 @@ a.imdb.btn {
   display: none;
 }
 
+button.download-link.tv-play.btn.video-play {
+  display: none
+  
+}
+
+i.fa.fa-circle {
+  display: none
+  
+}
+
+button.tv-add.btn {
+  display: none
+  
+}
+
 /**
  * Grids
  */
