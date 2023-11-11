@@ -98,7 +98,7 @@ app.TvshowListItemView = Backbone.View.extend({
   className: 'tvshow-item-content',
 
   events:{
-    "click .tvshow-play": "playTvshow",
+//    "click .tvshow-play": "playTvshow",
     "click .tvshow-add": "add",
     "click .tvshow-thumbsup": "thumbsUp",
 //    "click .tvshow-menu": "menu",
