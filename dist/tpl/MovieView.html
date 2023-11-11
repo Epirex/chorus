@@ -59,7 +59,7 @@
 
                         <% if(runtime > 0){ %>
                         <div class="duration sub-block">
-                            <h4>DURACIÓN</h4>
+                            <h4>Duration</h4>
                             <ul>
                                 <li><%=app.helpers.formatTime(app.helpers.secToTime(runtime))%></li>
                             </ul>
@@ -67,7 +67,7 @@
                         <% } %>
 
                         <div class="quality sub-block">
-                            <h4>DURACIÓN</h4>
+                            <h4>Quality</h4>
                             <ul>
                                 <% for(i in streamdetails.video){
                                     var s = streamdetails.video[i];

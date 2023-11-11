@@ -9,7 +9,7 @@
             <div class="actions-wrapper tvshow-actions-wrapper">
                 <div class="actions tvshow-actions<%= (thumbsup ? ' thumbs-up' : '') %>" data-id="<%= tvshowid %>">
                     <button class="tvshow-thumbsup btn" title="Thumbs Up"><i class="fa fa-thumbs-up"></i></button>
-                    <button class="download-link btn" title="Replace the playlist with this tvshow and start playing"><i class="fa fa-play"></i></button>
+                    <button class="tvshow-play btn" title="Replace the playlist with this tvshow and start playing"><i class="fa fa-play"></i></button>
                     <button class="tvshow-add btn" title="Add this tvshow to the playlist"><i class="fa fa-plus"></i></button>
                     <!--<button class="tvshow-menu btn" title="More tvshow options"><i class="fa fa-ellipsis-v"></i></button>-->
                 </div>
@@ -30,8 +30,10 @@
                 <ul class="nav nav-tabs">
                     <li class="active" data-id="tv-season"><a href="#tv-season" title="Tv items" data-toggle="tab">Season<%=(type == 'tvshow' ? 's' : ' ' + season)%></a></li>
                     <% if(cast.length > 0){ %>
+                        <li data-id="about"><a href="#tvshow-cast" title="<%=cast.length%> cast members found" data-toggle="tab">Cast</a></li>
                     <% } %>
                     <% if(type == 'episode'){ %>
+                        <li data-id="watch"><a href="#tv-watch" title="Stream this video" data-toggle="tab">Stream</a></li>
                     <% } %>
                 </ul>
             </div>
@@ -53,7 +55,8 @@
                         <% } %>
 
                         <div class="buttons">
-                            <a href="#" class="download-link btn cta"><i class="fa fa-play"></i>Play <%=(type == 'episode' ? 'Episode' : 'All')%></a>
+                            <a href="#tvshow/<%= tvshowid %>" class="tvshow-play btn cta"><i class="fa fa-play"></i>Play <%=(type == 'episode' ? 'Episode' : 'All')%></a>
+                            <a href="#tvshow/<%= tvshowid %>" class="tvshow-add btn"><i class="fa fa-plus"></i> Queue <%=(type == 'episode' ? 'Episode' : 'All')%></a>
                             <% if(type == 'tvshow'){ %>
                             <a href="#tvshow/<%= tvshowid %>" class="library-next btn"><i class="fa fa-chevron-right"></i> Next</a>
                             <% } %>
@@ -61,6 +64,7 @@
                             <a href="#tvshow/<%= tvshowid %>" class="btn"><i class="fa fa-arrow-up"></i>All Seasons</a>
                             <% } %>
                             <% if(imdbnumber != ''){ %>
+                            <a href="http://www.imdb.com/title/<%=imdbnumber%>/" target="_blank" class="imdb btn"><i class="fa fa-film"></i> IMDB</a>
                             <% } %>
                         </div>
 
