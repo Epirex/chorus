@@ -28,7 +28,7 @@
                     <a href="#" class="library-next"><i class="fa fa-chevron-right"></i></a>
                 </div>
                 <ul class="nav nav-tabs">
-                    <li class="active" data-id="tv-season"><a href="#tv-season" title="Tv items" data-toggle="tab">Season<%=(type == 'tvshow' ? 's' : ' ' + season)%></a></li>
+                    <li class="active" data-id="tv-season"><a href="#tv-season" title="Tv items" data-toggle="tab">Temporada<%=(type == 'tvshow' ? 's' : ' ' + season)%></a></li>
                     <% if(cast.length > 0){ %>
                     <% } %>
                     <% if(type == 'episode'){ %>
@@ -53,12 +53,11 @@
                         <% } %>
 
                         <div class="buttons">
-                            <a href="#tvshow/<%= tvshowid %>" class="download-link btn cta"><i class="fa fa-play"></i>Play <%=(type == 'episode' ? 'Episode' : 'All')%></a>
                             <% if(type == 'tvshow'){ %>
-                            <a href="#tvshow/<%= tvshowid %>" class="library-next btn"><i class="fa fa-chevron-right"></i> Next</a>
+                            <a href="#tvshow/<%= tvshowid %>" class="library-next btn"><i class="fa fa-chevron-right"></i> Siguiente</a>
                             <% } %>
                             <% if(type == 'episode' || type == 'season'){ %>
-                            <a href="#tvshow/<%= tvshowid %>" class="btn"><i class="fa fa-arrow-up"></i>All Seasons</a>
+                            <a href="#tvshow/<%= tvshowid %>" class="btn"><i class="fa fa-arrow-up"></i>Todas las temporadas</a>
                             <% } %>
                             <% if(imdbnumber != ''){ %>
                             <% } %>
@@ -84,7 +83,7 @@
                         <div class="quality sub-block">
                             <h4>In the library</h4>
                             <ul>
-                                <li><%=episode%> episodes</li>
+                                <li><%=episode%> Episodio</li>
 
                             </ul>
                         </div>
